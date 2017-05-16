@@ -36,4 +36,9 @@ public class PlayerMovement : MonoBehaviour {
 
         _rb.MovePosition(pos);
     }
+
+    public void lookAt(Vector3 point) {
+        transform.LookAt(point);
+        transform.eulerAngles = new Vector3(90, transform.eulerAngles.y, 0);
+    }
 }
