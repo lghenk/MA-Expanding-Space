@@ -21,11 +21,7 @@ public class PlayerAiming : MonoBehaviour {
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 1000, mask)) {
-            print(hit.collider.name);       
             _playerMovement.lookAt(hit.point);
-        }
-        if (Input.GetMouseButtonDown(0)) {
-            //_playerShoot.Shoot();
         }
     }
 }

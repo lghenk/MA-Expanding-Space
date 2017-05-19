@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody _rb;
     private int speed = 10;
+    private Animator animator;
 
 	// Use this for initialization
 	void Start () {
         _rb = gameObject.GetComponent<Rigidbody>();
+        animator = gameObject.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +34,12 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D)) {
             pos.x += speed * Time.deltaTime;
+        }
+
+        if(Input.anyKey) {
+            animator.SetBool("isWalking", true);
+        } else {
+            animator.SetBool("isWalking", false);
         }
 
         _rb.MovePosition(pos);
