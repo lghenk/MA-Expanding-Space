@@ -12,12 +12,10 @@ public class EnemyController : MonoBehaviour {
 	void Start () {
 		pathfinder = GetComponent<NavMeshAgent> ();
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
-
 	}
 
 
 	void Update () {
 		pathfinder.SetDestination (target.position);
-
 	}
 }
