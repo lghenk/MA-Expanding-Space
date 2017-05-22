@@ -23,7 +23,7 @@ public class CameraBehaviour : MonoBehaviour {
             Vector3 targetDirection = (target.transform.position - posNoZ);
             interpVelocity = targetDirection.magnitude * 5f;
             targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
-            targetPos.y = 30;
+            targetPos.y = 5;
             transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
         }
     }
