@@ -17,7 +17,8 @@ public class EnemyController : MonoBehaviour {
 
 
 	void Update () {
-		pathfinder.SetDestination (target.position);
-
+		if (target != null) {
+			pathfinder.SetDestination (target.position);
+		}
 	}
 }
