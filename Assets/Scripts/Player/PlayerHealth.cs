@@ -13,18 +13,11 @@ public class PlayerHealth : MonoBehaviour {
 
 	}
 
-	public void HurtPlayer(int damageAmount)
-	{
+	public void HurtPlayer(int damageAmount) {
 		currentHealth -= damageAmount;
 
-		if (currentHealth <=0)
-		{
-			
+		if (currentHealth <=0) {			
 			Application.LoadLevel ("DeathScreen");
 		}
-
 	}
-
-
-
 }
