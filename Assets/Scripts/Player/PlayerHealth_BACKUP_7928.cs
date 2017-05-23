@@ -20,10 +20,15 @@ public class PlayerHealth : MonoBehaviour {
 	public void HurtPlayer(int damageAmount) {
 		currentHealth -= damageAmount;
 
+<<<<<<< HEAD
 		if (currentHealth <=0)
 		{
 			
+			Destroy (gameObject);
+=======
+		if (currentHealth <=0) {			
 			Application.LoadLevel ("DeathScreen");
+>>>>>>> origin/master
 		}
 	}
 }
