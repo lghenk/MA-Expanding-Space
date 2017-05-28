@@ -37,16 +37,30 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         if(Input.anyKey) {
-            animator.SetBool("isWalking", true);
+            if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
+                animator.SetBool("isWalking", true);
+            }
+
         } else {
             animator.SetBool("isWalking", false);
         }
 
         _rb.MovePosition(pos);
+
+        print("Direction: " + animator.GetInteger("direction") + " Is Walking: " + animator.GetBool("isWalking"));
     }
 
     public void lookAt(Vector3 point) {
-        transform.LookAt(point);
-        transform.eulerAngles = new Vector3(90, transform.eulerAngles.y, 0);
+        float ang = Quaternion.FromToRotation(Vector3.forward, point - transform.position).eulerAngles.y;
+        
+        if (ang >= 315 || ang <= 45) {
+            animator.SetInteger("direction", 1);
+        } else if (ang < 315 && ang >= 225) {
+            animator.SetInteger("direction", 0);
+        } else if (ang < 225 && ang >= 135) {
+            animator.SetInteger("direction", 3);
+        } else if (ang < 135 && ang > 45) {
+            animator.SetInteger("direction", 2);
+        }
     }
 }
