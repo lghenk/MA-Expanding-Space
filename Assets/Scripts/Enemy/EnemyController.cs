@@ -22,6 +22,13 @@ public class EnemyController : MonoBehaviour {
     void Update() {
 
         pathfinder.SetDestination(target.position);
+
+        if(Vector3.Distance(target.position, transform.position) < 5) {
+            pathfinder.isStopped = true;
+        } else {
+            pathfinder.isStopped = false;
+        }
+
         float ang = Quaternion.LookRotation(pathfinder.velocity).eulerAngles.y;
 
         if(ang >= 315 || ang <= 45) {

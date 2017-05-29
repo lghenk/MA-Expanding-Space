@@ -46,8 +46,6 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         _rb.MovePosition(pos);
-
-        print("Direction: " + animator.GetInteger("direction") + " Is Walking: " + animator.GetBool("isWalking"));
     }
 
     public void lookAt(Vector3 point) {
