@@ -6,10 +6,11 @@ public class EnemySpawnManager : MonoBehaviour {
 
     private GameObject[] _spawners;
     private GameObject player;
-    private float maxCooldown = 3;
+    private float maxCooldown = 2;
     private float curCooldown = 0;
-    private float maxSpawnDistance = 20;
+    private float maxSpawnDistance = 100;
     private List<GameObject> av_spawners = new List<GameObject>();
+    public int maxEnemies = 100;
 
     public GameObject enemy;
 
@@ -23,7 +24,7 @@ public class EnemySpawnManager : MonoBehaviour {
 	void Update () {
         int numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-        if(curCooldown <= 0) {
+        if(curCooldown <= 0 && numEnemies < maxEnemies) {
             curCooldown = maxCooldown;
             av_spawners.Clear();
             foreach(var go in _spawners) {

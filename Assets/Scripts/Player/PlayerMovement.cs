@@ -8,32 +8,40 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody _rb;
     private int speed = 10;
     private Animator animator;
-
+    private PlayerHealth _ph;
 	// Use this for initialization
 	void Start () {
         _rb = gameObject.GetComponent<Rigidbody>();
         animator = gameObject.GetComponent<Animator>();
+        _ph = GetComponent<PlayerHealth>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (_ph.isDead)
+            return;
 
         Vector3 pos = transform.position;
 
 		if(Input.GetKey(KeyCode.W)) {
             pos.z += speed * Time.deltaTime;
+            animator.SetInteger("direction", 1);
         }
 
         if (Input.GetKey(KeyCode.S)) {
             pos.z += -speed * Time.deltaTime;
+            animator.SetInteger("direction", 3);
         }
 
         if (Input.GetKey(KeyCode.A)) {
             pos.x += -speed * Time.deltaTime;
+            animator.SetInteger("direction", 0);
         }
 
         if (Input.GetKey(KeyCode.D)) {
             pos.x += speed * Time.deltaTime;
+            animator.SetInteger("direction", 2);
+
         }
 
         if(Input.anyKey) {
@@ -49,16 +57,5 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void lookAt(Vector3 point) {
-        float ang = Quaternion.FromToRotation(Vector3.forward, point - transform.position).eulerAngles.y;
-        
-        if (ang >= 315 || ang <= 45) {
-            animator.SetInteger("direction", 1);
-        } else if (ang < 315 && ang >= 225) {
-            animator.SetInteger("direction", 0);
-        } else if (ang < 225 && ang >= 135) {
-            animator.SetInteger("direction", 3);
-        } else if (ang < 135 && ang > 45) {
-            animator.SetInteger("direction", 2);
-        }
     }
 }

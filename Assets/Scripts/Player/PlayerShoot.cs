@@ -6,9 +6,14 @@ public class PlayerShoot : MonoBehaviour {
 
     public GameObject projectile;
     public LayerMask mask;
+    private PlayerHealth _ph;
+
+    private void Start() {
+        _ph = GetComponent<PlayerHealth>();
+    }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !_ph.isDead) {
             Shoot();
         }
     }
