@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy Spawner
+  - Enemy
+  - Pickup Spawner
+  - Stone
+  - Chest Pickup
+  - Spawn Area
+  - GameManager
+  - Tiles/Walls
+  - Heart_UI
+  - Ammo_UI
+  - FasterRecharge_UI
+  - BetterShotRecharge_UI
+  - Player_Hit
+  - Enemy_Hit
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 825874799
+    locked: 0
+  - name: Movables
+    uniqueID: 3068051533
+    locked: 0
+  - name: Particles
+    uniqueID: 3035093969
+    locked: 0

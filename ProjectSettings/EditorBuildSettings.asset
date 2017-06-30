@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 843053896e8406a449b280247494f912
+  - enabled: 1
+    path: Assets/Scenes/LevelGenerator.unity
+    guid: d550794db8244f34184700c473dbc8ab
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: ac2379e5335e01e4283c1348a3cfbdf6
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: abfbff21d00969f42adc6f3305f4f925
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: cd834bbf4cecdd6489af9fcf7a16b2e0
+  - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: d5d697110c70b134eb2d5846ed10049f
