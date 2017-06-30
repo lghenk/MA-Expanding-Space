@@ -8,7 +8,7 @@ Made by "group 6":
   - [GD1A] Timo Heijne
   - [GD1A] Wessel Vink
 - Artists
-  - [GA1A] Alan
+  - [GA1A] Alan Reulen Solano
   - [GA1A] Lois
   
 ---
