@@ -2,6 +2,11 @@
 
 This is a game made for a school assignment called "Expanding Space" we made this game in Unity.
 
+The controls of the game are: 
+- WASD : Walking
+- Arrow Keys : Shooting
+- Mouse : Menu Navigation
+
 ---
 Made by "group 6":
 - Developers:
