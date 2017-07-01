@@ -1,6 +1,7 @@
 # Expanding Space Project
 
 This is a game made for a school assignment called "Expanding Space" we made this game in Unity.
+Also ignore the contributions page. We made this project in unity using unity collaborate so all our commits are not shown here.
 
 The controls of the game are: 
 - WASD : Walking
