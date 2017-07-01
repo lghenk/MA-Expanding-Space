@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.D)) {
             pos.x += speed * Time.deltaTime;
             animatorBody.SetInteger("direction", 2);
-
         }
 
         if(Input.anyKey) {
@@ -56,7 +55,6 @@ public class PlayerMovement : MonoBehaviour {
                 animatorBody.SetBool("isWalking", true);
                 walkParticle.Play();
             }
-
         } else {
             animatorBody.SetBool("isWalking", false);
             walkParticle.Stop();
