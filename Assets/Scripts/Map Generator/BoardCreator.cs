@@ -4,6 +4,11 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
+
+// Bron Vermelding:
+// https://unity3d.com/learn/tutorials/topics/scripting/basic-2d-dungeon-generation
+// Map Generation tutorial gevolgt. Custom wall-generation added. Loot spawning, rocket spawning added
+
 public class BoardCreator : MonoBehaviour {
     public enum TileType {
         Wall,
